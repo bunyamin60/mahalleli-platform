@@ -1,0 +1,58 @@
+export const AID_PACKAGES = [
+  {
+    id: 'food-basic',
+    name: 'Temel Gıda Paketi',
+    price: 980,
+    imageUrl: 'https://placehold.co/720x420/0f172a/93c5fd?text=Temel+Gida+Paketi',
+    description: 'Ailenin bir haftalık temel mutfak ihtiyaçlarını kapsayan ekonomik paket.',
+    items: [
+      { name: 'Un', brand: 'Soke', quantity: 2, unitPrice: 135 },
+      { name: 'Pirinç', brand: 'Baldo', quantity: 2, unitPrice: 165 },
+      { name: 'Ayçiçek Yağı', brand: 'Yudum', quantity: 1, unitPrice: 255 },
+      { name: 'Makarna', brand: 'Nuhun Ankara', quantity: 4, unitPrice: 42 },
+      { name: 'Mercimek', brand: 'Duru', quantity: 2, unitPrice: 78 },
+    ],
+  },
+  {
+    id: 'baby-care',
+    name: 'Bebek Bakım Paketi',
+    price: 1580,
+    imageUrl: 'https://placehold.co/720x420/1e1b4b/c4b5fd?text=Bebek+Bakim+Paketi',
+    description: 'Bebekli aileler için hijyen ve bakım ürünlerinden oluşan destek paketi.',
+    items: [
+      { name: 'Bebek Bezi (4 Numara)', brand: 'Prima', quantity: 1, unitPrice: 620 },
+      { name: 'Islak Mendil', brand: 'Sleepy', quantity: 4, unitPrice: 55 },
+      { name: 'Bebek Şampuanı', brand: 'Dalin', quantity: 1, unitPrice: 160 },
+      { name: 'Pişik Kremi', brand: 'Bepanthol', quantity: 1, unitPrice: 245 },
+      { name: 'Bebek Sabunu', brand: 'Mustela', quantity: 2, unitPrice: 130 },
+    ],
+  },
+  {
+    id: 'stationery-set',
+    name: 'Kırtasiye Seti',
+    price: 760,
+    imageUrl: 'https://placehold.co/720x420/312e81/a5b4fc?text=Kirtasiye+Seti',
+    description: 'Okul çağındaki çocukların temel ders araçlarını içeren eğitim paketi.',
+    items: [
+      { name: 'Defter', brand: 'Gipta', quantity: 8, unitPrice: 36 },
+      { name: 'Kurşun Kalem', brand: 'Faber-Castell', quantity: 10, unitPrice: 14 },
+      { name: 'Silgi', brand: 'Serve', quantity: 3, unitPrice: 18 },
+      { name: 'Boya Kalemi Seti', brand: 'Bic', quantity: 1, unitPrice: 195 },
+      { name: 'Dosya', brand: 'Noki', quantity: 4, unitPrice: 24 },
+    ],
+  },
+  {
+    id: 'hygiene-pack',
+    name: 'Hijyen Paketi',
+    price: 890,
+    imageUrl: 'https://placehold.co/720x420/0c4a6e/67e8f9?text=Hijyen+Paketi',
+    description: 'Kişisel bakım ve ev içi hijyen için temel ürünleri bir araya getirir.',
+    items: [
+      { name: 'Diş Macunu', brand: 'Colgate', quantity: 3, unitPrice: 64 },
+      { name: 'Sabun', brand: 'Duru', quantity: 6, unitPrice: 27 },
+      { name: 'Şampuan', brand: 'Elidor', quantity: 2, unitPrice: 118 },
+      { name: 'Dezenfektan', brand: 'Farmasi', quantity: 2, unitPrice: 96 },
+      { name: 'Kadın Hijyen Pedi', brand: 'Orkid', quantity: 2, unitPrice: 115 },
+    ],
+  },
+]
