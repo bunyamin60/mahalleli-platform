@@ -1,1 +1,1 @@
-export const NEIGHBORHOODS = ['Sakarya', 'Serdivan', 'Bahcelievler', 'Adapazari', 'Erenler']
+export { NEIGHBORHOODS, DEFAULT_NEIGHBORHOOD } from './locations'

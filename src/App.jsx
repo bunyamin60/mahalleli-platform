@@ -10,10 +10,14 @@ function App() {
   const { message, sessions, register, login, logout } = useAppContext()
   const navigate = useNavigate()
 
-  const handleLogin = (role, form) => {
-    const result = login(role, form)
-    if (result.ok) {
-      navigate(`/dashboard/${role}`)
+  const handleLogin = async (role, form) => {
+    try {
+      const result = await login(role, form)
+      if (result?.ok) {
+        navigate(`/dashboard/${role}`)
+      }
+    } catch (error) {
+      console.warn('[Mahalleli] giriş yönlendirmesi başarısız', error)
     }
   }
 
@@ -54,10 +58,10 @@ function AppLayout({ message, activeRole, onRoleChange, showRoleTabs = true, chi
     <main className="app-shell">
       <section className="hero">
         <p className="eyebrow">MAHALLELI PLATFORMU</p>
-        <h1>Rol Bazlı Yardım Ağı</h1>
+        <h1 className="tracking-tight">Rol Bazlı Yardım Ağı</h1>
         <p>
-          Bağışçı, ihtiyaç sahibi, esnaf ve belediye için giriş akışları, özel paneller ve QR ile teslim
-          simülasyonu.
+          Belediye onaylı yerel yardım ağı: tekil ürün sepeti, genel havuz fonlaması, esnaf tipine göre
+          stok yönetimi ve gel-al / kurye teslimat seçenekleri.
         </p>
         {message && <p className="system-message">{message}</p>}
       </section>
@@ -109,7 +113,7 @@ function DashboardPage({ message, sessions, onLogout }) {
         <section className="card">
           <div className="card-head">
             <p className="eyebrow">Oturum</p>
-            <h2>{user.name}</h2>
+            <h2 className="tracking-tight">{user.name}</h2>
           </div>
           <p className="muted">Aktif rol: {ROLES.find((item) => item.id === selectedRole)?.label}</p>
           <button type="button" className="danger top-gap" onClick={onLogout}>

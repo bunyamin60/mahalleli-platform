@@ -1,0 +1,18 @@
+# MAHALLELI PLATFORM - DESIGN & CODE STANDARDS
+
+## 1. UI / UX & Design System (GovTech / Modern SaaS)
+- **Aesthetic:** Clean, trustworthy, modern municipal software (GovTech). Avoid generic bright neon tones, playful borders, or raw bootstrap-like inputs.
+- **Color Palette:**
+  - Neutral canvas: Soft background (`bg-slate-50` or `bg-zinc-50`), crisp white cards (`bg-white`).
+  - Primary / Trust: Deep slate (`slate-900`), civic navy (`indigo-600`), and emerald accents (`emerald-600`) for approvals and funds.
+  - Borders & Shadows: Subtle hairline borders (`border border-slate-200/80`), refined micro-shadows (`shadow-xs` to `shadow-sm`, hover `shadow-md`).
+- **Typography & Components:**
+  - Modern typography hierarchy with `tracking-tight` on headings.
+  - Inputs: Clean focus states (`focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 outline-none transition-all`).
+  - Buttons: Rounded-xl or rounded-lg, smooth micro-interactions (`hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150`).
+  - Badges & Pills: Refined status pills with semi-transparent backgrounds (`bg-emerald-50 text-emerald-700 border border-emerald-200/60`).
+
+## 2. Technical & Architecture Guardrails
+- **Preserve State & Integration:** NEVER break or remove Supabase calls (`supabaseClient.js`), existing data bindings, or the 8-second offline fallback mechanism.
+- **Defensive Matching:** When filtering strings (such as merchant names, roles, or order categories), ALWAYS sanitize inputs with `.toLowerCase().trim()` and strip parenthesis / prefixes.
+- **Feedback & States:** Provide smooth loading skeletons, subtle toast notifications, and zero layout shifting during async data loads.
